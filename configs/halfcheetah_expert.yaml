@@ -1,0 +1,32 @@
+project: 'decision_transformer'
+group: 'halfcheetah'
+name: 'expert'
+
+dataset: 'medium-expert'
+rtg_scale: 1000
+env: 'halfcheetah'
+dataset_dir: 'd4rl_data'
+model_save_dir: 'models'
+
+context_len: 20
+n_blocks: 3
+n_heads: 1
+embed_dim: 128
+dropout_p: 0.1
+
+max_episode_len: 1000
+n_episodes: 10
+
+batch_size: 64
+lr: 1e-4
+weight_decay: 1e-4
+warmup_steps: 10000
+grad_clip: 0.25
+
+max_train_iters: 200
+num_updates_per_iter: 100
+eval_interval: 10
+train_seed: 10
+eval_seed: 42
+
+device: 'cuda'
